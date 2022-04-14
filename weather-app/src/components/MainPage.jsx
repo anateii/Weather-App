@@ -1,7 +1,7 @@
 
 import WeatherBox from "./WeatherBox";
 import "./main.css";
-import { useState } from "react";
+import { useState , useEffect} from "react";
 
 
 
@@ -17,12 +17,19 @@ const [query,setQuery] = useState('');
 const [weather,setWeather] = useState({});
 
 
+/* useEffect(() => {
+  setWeather(JSON.parse(window.localStorage.getItem(weather)))
+}, [])
 
-
+useEffect(()=>{
+  window.localStorage.setItem('weather', weather);
+},[weather])
+ */
 
 const search = event => {
+//event.preventDefault()
 if (event.key ==="Enter") {
- fetch (`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&APPID=c82f22d5936febcd7279507dee6fe70b`)
+ fetch (`http://api.openweathermap.org/data/2.5/weather?q=${query}&units=metric&appid=c82f22d5936febcd7279507dee6fe70b`)
 .then (response => response.json())
 .then (result => 
  { 

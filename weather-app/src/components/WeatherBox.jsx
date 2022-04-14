@@ -40,8 +40,8 @@ const WeatherBox = ({weather}) => {
       <div className="weather-wrapper">
         <div className="location"> {weather.name}</div>
         <div className="date">{dateBuilder(new Date())}</div>
-        <div className="temperature"> {/* {Math.floor(weather.main.temp)} */}°C</div>
-        <div id="condition">{/*  {weather.weather[0].main}  */}</div>
+         <div className="temperature">  {Math.floor(weather.main.temp)}°C</div>
+        <div id="condition">  {weather.weather[0].description} </div>   
       </div>
     </div>
   );
