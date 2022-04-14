@@ -1,6 +1,6 @@
 import "./main.css";
 
-const WeatherBox = ({weather}) => {
+const WeatherBox = ({weatherData}) => {
   const dateBuilder = (d) => {
     let months = [
       "January",
@@ -38,10 +38,10 @@ const WeatherBox = ({weather}) => {
   return (
     <div className="weather-box">
       <div className="weather-wrapper">
-        <div className="location"> {weather.name}</div>
+        <div className="location">{weatherData.name}</div>
         <div className="date">{dateBuilder(new Date())}</div>
-         <div className="temperature">  {Math.floor(weather.main.temp)}°C</div>
-        <div id="condition">  {weather.weather[0].description} </div>   
+         <div className="temperature">  {Math.floor(weatherData.main.temp-273.15)}°C</div>
+        <div id="condition">{weatherData.weather[0].description}</div>   
       </div>
     </div>
   );
