@@ -1,0 +1,97 @@
+body {
+    background: #F2994A;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F2C94C, #F2994A);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F2C94C, #F2994A); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+  background-repeat: no-repeat;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+#container-wrapper {
+  background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.5)), url("../assets/sunny.jpg");
+  width: 550px;
+  height: 700px;
+  background-repeat: no-repeat;
+  border: 1px solid transparent;
+  border-radius: 1.5rem;
+  display: flex;
+  justify-content: center;
+  margin: auto;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  -webkit-box-shadow: 8px 3px 21px -4px rgba(255, 173, 96, 0.75); 
+box-shadow: 8px 3px 21px -4px rgba(255,173,96,0.75);
+}
+
+#input-wrapper {
+  padding-top: 2rem;
+}
+
+input {
+  height: 2.5rem;
+  border-radius: 0.8rem 0.4rem;
+  border: 1px solid transparent;
+  color:white;
+  background-color:hsla(28, 87%, 62%, 0.5);
+  box-shadow: 0px 5px rgba(0, 0, 0, 0.2);
+
+}
+
+
+input:focus {
+  outline-style: none;
+  background-color: hsla(28, 87%, 62%, 0.804);
+}
+
+input::placeholder {
+    color: rgba(0, 0, 0, 0.5);
+}
+
+
+.weather-box {
+    margin-top: 4rem;
+    height: 12rem;
+    width: 20rem;
+    color: rgba(0, 0, 0, 0.9);
+   
+}
+
+.weather-box .location {
+    color: #fff;
+    font-size: 33px;
+    font-weight: 500;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
+
+.weather-box .date {
+    color: #fff;
+    font-size: 18px;
+    font-style:italic;
+    text-shadow: 2px 2px rgba(0, 0, 0, 0.2);
+}
+
+.weather-wrapper {
+    text-align:center;
+}
+
+.weather-box .temperature {
+    margin: 30px auto;
+    background-color: hsla(28, 87%, 62%, 0.504);
+    border: 1px solid transparent;
+    border-radius:16px;
+    padding: 15px 15px;
+    font-size: 100px;
+    font-weight: 900px;
+    text-shadow: 4px 6px rgba(0, 0, 0, 0.5);
+    color: #fff;
+
+    box-shadow: 3px 6px rgba(0, 0, 0, 0.2);
+}
+
+
+#condition {
+    color: #fff;
+    font-weight:900px;
+    font-size: 48px;
+    text-shadow: 3px 3px rgba(50, 50, 70, 0.5);
+}
