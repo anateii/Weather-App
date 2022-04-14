@@ -41,7 +41,10 @@ const WeatherBox = ({weatherData}) => {
         <div className="location">{weatherData.name}</div>
         <div className="date">{dateBuilder(new Date())}</div>
          <div className="temperature">  {Math.floor(weatherData.main.temp-273.15)}°C</div>
-        <div id="condition">{weatherData.weather[0].description}</div>   
+        <div id="condition">{weatherData.weather[0].description}</div> 
+       <div>
+          <img src={`http://openweathermap.org/img/wn/${weatherData.weather[0].icon}@2x.png`} alt="" />
+          </div>  
       </div>
     </div>
   );

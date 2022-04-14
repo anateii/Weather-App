@@ -6,9 +6,14 @@ const MainPage = () => {
   const [lat, setLat] = useState([]);
   const [long, setLong] = useState([]);
   const [data, setData] = useState([]);
+  const [city,setCity] = useState('')
 
   useEffect(() => {
-    const fetchData = async () => {
+    fetchData();
+  }, [lat,long]);
+
+  
+  const fetchData = async () => {
       navigator.geolocation.getCurrentPosition(function (position) {
         setLat(position.coords.latitude);
         setLong(position.coords.longitude);
@@ -23,19 +28,21 @@ const MainPage = () => {
           console.log(result);
         });
     };
-    fetchData();
-  }, [lat, long]);
+
+
+
 
   return (
     <main>
       <div id="container-wrapper">
-        <div id="input-wrapper">
-          <input
+        <div id="input-wrapper" >
+       
+           <input
             type="text"
             placeholder="Search for..."
-            /* value={query} 
-            onChange={e => setQuery(e.target.value)}
-            onKeyDown={search} */
+            value={city}
+            onChange={(e) => setCity(e.target.value)}
+           // onKeyDown={handleSearch}
           />
           {typeof data.main != "undefined" ? (
             <WeatherBox weatherData={data} />
